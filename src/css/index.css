@@ -96,12 +96,17 @@ footer {
     width: 60%;
     max-width: 600px;
     text-align: center;
+    animation: zoomIn 0.3s ease;
 }
 
 #modal-content > header{
     margin-top: 20px;
     /*display: flex;
     flex-direction: row;*/
+}
+
+#modal-content.fade-out {
+    animation: zoomOut 0.3s ease;
 }
 
 #champion-info {
@@ -169,6 +174,30 @@ h3 {
 
 th, td {
     padding: 5px;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {

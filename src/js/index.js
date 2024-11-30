@@ -122,6 +122,13 @@ function openModal(championIndex) {
 function closeModal() {
     // Seleccionamos el modal
     const modal = document.getElementById('modal');
-    // Ocultamos el modal
-    modal.style.display = 'none';
+    const modalContent = document.getElementById('modal-content');
+
+    modalContent.classList.add('fade-out');
+
+    setTimeout(() => {
+        // Ocultamos el modal
+        modal.style.display = 'none';
+        modalContent.classList.remove('fade-out');
+    }, 300);
 }
