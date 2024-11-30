@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel src/index.html",
     "start": "parcel serve -d dist src/index.html",
     "build": "parcel build -d build --public-url /lolchampions/ src/index.html",
     "deploy": "gh-pages -d build"

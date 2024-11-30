@@ -66,6 +66,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    #lol-image {
+        transform: scale(0.8);
+    }
+
     .card-info h3 {
         font-size: 16px;
     }
@@ -160,6 +164,10 @@ footer {
 
 #champion-stats {
     text-align: start;
+}
+
+#champion-stats div {
+    overflow-x: auto;
 }
 
 #champion-stats table, th, td {
