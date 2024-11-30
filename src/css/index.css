@@ -44,7 +44,7 @@ body {
 
 .card img {
     width: 100%;
-    display: block;
+    
 }
 
 .card-info {
@@ -63,21 +63,6 @@ body {
     font-size: 14px;
     color: #B0C4DE;
     text-transform: capitalize;
-}
-
-@media (max-width: 768px) {
-    #lol-image {
-        transform: scale(0.8);
-    }
-
-    .card-info h3 {
-        font-size: 16px;
-    }
-    
-    .card-info p {
-        font-size: 12px;
-        text-transform: capitalize; 
-    }
 }
 
 footer {
@@ -115,8 +100,8 @@ footer {
 
 #modal-content > header{
     margin-top: 20px;
-    display: flex;
-    flex-direction: row;
+    /*display: flex;
+    flex-direction: row;*/
 }
 
 #champion-info {
@@ -128,8 +113,9 @@ footer {
 #champion-name {
     color: #F1C40F;
     font-weight: bold;
+    font-size: 30px;
     text-align: start;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
@@ -183,4 +169,19 @@ h3 {
 
 th, td {
     padding: 5px;
+}
+
+@media (max-width: 768px) {
+    #lol-image {
+        transform: scale(0.7);
+    }
+
+    .card-info h3 {
+        font-size: 16px;
+    }
+    
+    .card-info p {
+        font-size: 12px;
+        text-transform: capitalize; 
+    }
 }
