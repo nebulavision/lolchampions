@@ -1,0 +1,178 @@
+body {
+    background-image: url('../assets/images/background.webp');
+    background-position: 10% 80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lol-image {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #1A273A;
+    border: 2px solid #30475E;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-info h3 {
+    margin: 5px 0;
+    color: #FFCC00;
+    font-size: 18px;
+}
+
+.card-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #B0C4DE;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .card-info h3 {
+        font-size: 16px;
+    }
+    
+    .card-info p {
+        font-size: 12px;
+        text-transform: capitalize; 
+    }
+}
+
+footer {
+    background-color: #000;
+    color: #FFCC00;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-content {
+    position: relative;
+    background: linear-gradient(145deg, #1C1C1C, #333);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    border-radius: 12px;
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#modal-content > header{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#champion-info {
+    flex: 2;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+#champion-name {
+    color: #F1C40F;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+#champion-description {
+    margin-top: 0;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+#champion-image {
+    margin: auto;
+    flex: 1;
+    width: 40%;
+    height: 40%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+#close-modal {
+    background: none;
+    border: none;
+    color: #FFF;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#champion-stats {
+    text-align: start;
+}
+
+#champion-stats table, th, td {
+    text-align: center;
+    border-color: gray;
+    border-collapse: collapse;
+}
+
+h3 {
+    text-decoration: underline;
+    color:#F1C40F
+}
+
+th, td {
+    padding: 5px;
+}
